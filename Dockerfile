@@ -4,12 +4,11 @@ WORKDIR /app
 # Enable pnpm via corepack
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
-# Copy dependency manifests and install dependencies
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./
-RUN pnpm install --frozen-lockfile || pnpm install
-
-# Copy application source and build production bundle
+# Copy the entire workspace first to satisfy local package dependencies
 COPY . .
+
+# Install dependencies and build production bundle
+RUN pnpm install --frozen-lockfile || pnpm install
 RUN pnpm exec vite build
 
 # Production web server stage
