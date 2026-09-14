@@ -1,0 +1,14 @@
+allowBuilds:
+  '@biomejs/biome': true
+  better-sqlite3: true
+  core-js: true
+  cpu-features: true
+  dugite: true
+  dyad-keychain-reader@file:native/keychain-reader: set this to true or false
+  electron: true
+  electron-winstaller: true
+  esbuild: true
+  node-pty: true
+  ssh2: true
+
+nodeLinker: hoisted

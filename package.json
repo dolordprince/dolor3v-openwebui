@@ -1,5 +1,5 @@
 {
-  "name": "dyad",
+  "name": "traveler-dev",
   "version": "1.15.0",
   "description": "Free, local, open-source AI app builder",
   "keywords": [],
@@ -157,8 +157,8 @@
     "update-electron-app": "^3.1.2",
     "use-sync-external-store": "^1.6.0",
     "uuid": "^11.1.0",
-    "yaml": "^2.8.1",
     "ws": "^8.19.0",
+    "yaml": "^2.8.1",
     "zod": "^4.3.6"
   },
   "optionalDependencies": {
@@ -215,6 +215,7 @@
     "typescript": "6.0.3",
     "undici": "^8.7.0",
     "vite": "^5.4.17",
+    "vite-plugin-pwa": "^1.3.0",
     "vitest": "^3.1.1"
   },
   "overrides": {
@@ -225,5 +226,5 @@
   "engines": {
     "node": ">=24 <26"
   },
-  "productName": "dyad"
+  "productName": "Traveler.Dev"
 }
