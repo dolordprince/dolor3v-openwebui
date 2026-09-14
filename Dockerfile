@@ -1,6 +1,9 @@
 FROM node:20-slim AS builder
 WORKDIR /app
 
+# Install native build dependencies (Python, make, g++) for node-gyp
+RUN apt-get update && apt-get install -y python3 make g++ && rm -rf /var/lib/apt/lists/*
+
 # Enable pnpm via corepack
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
